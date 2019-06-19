@@ -25,7 +25,20 @@ function App() {
 
         <div className="content-section">
 
-          <div className="category-menu">
+          <CategorySection/>
+
+          <div className="product-area">
+            
+            <div className="product-box">
+
+              <div className="product-wrapper">
+                <img src="" alt="Image"></img>
+                <h4 className="product-header">Title with Two Very Very Long Lines</h4>
+                <p className="product-desc">And an even longer description to boot. Why bother describing something in so many words?</p>
+                <button className="cta-button">BUY NOW</button>
+              </div>
+
+            </div>
 
           </div>
 
@@ -55,6 +68,21 @@ function HeroText(props){
       <p className="hero-text">{props.text}</p>
     </div>
   );
+}
+
+function CategorySection(){
+  return(
+    <div className="category-menu">
+            <ul>
+              <li><a href="#">Footwear</a></li>
+              <li><a>Water Fountains</a></li>
+              <li><a></a>Garage Door Openers</li>
+              <li><a></a>Smart Home Tech</li>
+              <li><a></a>Beverages</li>
+              <li><a></a>Education</li>
+            </ul>
+          </div>
+  )
 }
 
 export default App;

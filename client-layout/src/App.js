@@ -1,5 +1,8 @@
 import React from 'react';
 import logo from './assets/logo_transparent';
+import shoe from './assets/shoe.jpg';
+import watch from './assets/watch.jpg';
+import bike from './assets/bike.jpg';
 import './App.scss';
 //import hero from './assets/hero-splash.jpg';
 
@@ -29,16 +32,12 @@ function App() {
 
           <div className="product-area">
             
-            <div className="product-box">
-
-              <div className="product-wrapper">
-                <img src="" alt="Image"></img>
-                <h4 className="product-header">Title with Two Very Very Long Lines</h4>
-                <p className="product-desc">And an even longer description to boot. Why bother describing something in so many words?</p>
-                <button className="cta-button">BUY NOW</button>
-              </div>
-
-            </div>
+            <ProductBox source={shoe}/>
+            <ProductBox source={watch}/>
+            <ProductBox source={shoe}/>
+            <ProductBox source={bike}/>
+            <ProductBox source={shoe}/>
+            <ProductBox source={watch}/>
 
           </div>
 
@@ -74,14 +73,29 @@ function CategorySection(){
   return(
     <div className="category-menu">
             <ul>
-              <li><a href="#">Footwear</a></li>
-              <li><a>Water Fountains</a></li>
-              <li><a></a>Garage Door Openers</li>
-              <li><a></a>Smart Home Tech</li>
-              <li><a></a>Beverages</li>
-              <li><a></a>Education</li>
+              <li>Footwear</li>
+              <li>Water Fountains</li>
+              <li>Garage Door Openers</li>
+              <li>Smart Home Tech</li>
+              <li>Beverages</li>
+              <li>Education</li>
             </ul>
           </div>
+  )
+}
+
+function ProductBox(props){
+  return(
+    <div className="product-box">
+
+              <div className="product-wrapper">
+                <img src={props.source} alt="product"></img>
+                <h4 className="product-header">Title with Two Very Very Long Lines</h4>
+                <p className="product-desc">And an even longer description to boot. Why bother describing something in so many words?</p>
+                <button className="cta-button">BUY NOW</button>
+              </div>
+
+            </div>
   )
 }
 

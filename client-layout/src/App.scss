@@ -77,8 +77,8 @@ nav{
 
 .textbox{
   display: inline-block;
-  margin-top: 13vh;
-  margin-left: 25%;
+  margin-top: 8vh;
+  margin-left: 21%;
 }
 
 .hero-text{
@@ -184,5 +184,24 @@ nav{
     }
 
   }
+
+}
+
+@media screen and (max-width: $desktop-width){
+.category-menu{
+  width: 30%;
+}
+
+.product-area{
+  width: 60%;
+}
+
+.product-box{
+  width: 35%;
+}
+
+}
+
+@media screen and (max-width: $tablet-width){
 
 }
